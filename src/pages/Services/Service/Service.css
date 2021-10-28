@@ -1,0 +1,12 @@
+.rounded-4 {
+  border-radius: 9px;
+}
+
+.rounded-bottom-add {
+  border-end-end-radius: 9px;
+  border-end-start-radius: 9px;
+}
+
+.onclick {
+  cursor: pointer;
+}
