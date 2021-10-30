@@ -1,6 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
 import { useHistory, useParams } from "react-router";
-import { useState } from "react/cjs/react.development";
 import useAuth from "../../Context/useAuth";
 
 const VolunteerRegister = () => {

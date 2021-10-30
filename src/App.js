@@ -4,6 +4,7 @@ import Event from "./pages/Event/Event";
 import Home from "./pages/Home/Home";
 import Login from "./pages/Login/Login";
 import Header from "./pages/Shireits/Header/Header";
+import UserEventShow from "./pages/UserEventShow/UserEventShow";
 import VolunteerRegister from "./pages/VolunteerRegister/VolunteerRegister";
 import PriveateROute from "./PriveateRoute/PriveateROute";
 
@@ -21,6 +22,9 @@ function App() {
           </Route>
           <Route exact path="/login">
             <Login></Login>
+          </Route>
+          <Route exact path="/usereventshow">
+            <UserEventShow></UserEventShow>
           </Route>
           <PriveateROute exact path="/register/:titlename">
             <VolunteerRegister></VolunteerRegister>

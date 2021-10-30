@@ -1,6 +1,11 @@
 import React from "react";
+import useLoadedata from "../../../Hooks/useLoadedata";
 
 const VolunteerRegList = () => {
+  const { volunteerList, setVolunteerList, deletevolunteerlist } =
+    useLoadedata();
+
+  let i = 1;
   return (
     <div className=" table-responsive">
       <table className="table  table-borderless   caption-top">
@@ -15,17 +20,26 @@ const VolunteerRegList = () => {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-            <td>
-              <button className="btn btn-sm btn-danger">
-                <i className="fas fa-trash"></i>
-              </button>
-            </td>
-          </tr>
+          {volunteerList.map((voluntee) => {
+            console.log(voluntee._id);
+            return (
+              <tr>
+                <th scope="row">{i++}</th>
+                <td>{voluntee.fullname}</td>
+                <td>{voluntee.email}</td>
+                <td>{voluntee.organizebooksname}</td>
+
+                <td>
+                  <button
+                    onClick={() => deletevolunteerlist(voluntee?._id)}
+                    className="btn btn-sm btn-danger"
+                  >
+                    <i className="fas fa-trash"></i>
+                  </button>
+                </td>
+              </tr>
+            );
+          })}
         </tbody>
       </table>
     </div>
